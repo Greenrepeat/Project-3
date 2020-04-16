@@ -31,13 +31,5 @@ public class MovingPlatform : MonoBehaviour
         this.transform.position += moveDirection * Time.deltaTime * this.moveDistance * Mathf.Sin(Time.time * this.moveSpeed);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        other.transform.parent = this.transform;
-    }
 
-    private void OnTriggerExit(Collider other)
-    {
-        other.transform.parent = null;
-    }
 }
