@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Respawn : MonoBehaviour
 {
+    // serialization is used here to save it to memory, rather than a specific location.
     [SerializeField] private Transform player;
 
     [SerializeField] private Transform respawnPoint;
