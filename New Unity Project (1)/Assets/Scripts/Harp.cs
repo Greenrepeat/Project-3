@@ -30,7 +30,12 @@ public class Harp : MonoBehaviour
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
             Debug.Log(hit.transform.name);
+            if (hit.collider.gameObject.GetComponent<Button>())
+            {
+                hit.collider.gameObject.GetComponent<Button>().OnClick.Invoke();
+            }        
         }
+
     }
 
 }
